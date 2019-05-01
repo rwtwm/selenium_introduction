@@ -1,8 +1,7 @@
 package com.sparta.waj;
 
 import com.sparta.waj.bbcwebsite.BbcWebsite;
-import com.sparta.waj.bbcwebsite.pages.HomePage;
-import org.openqa.selenium.By;
+import com.sparta.waj.bbcwebsite.bbcpageobjects.HomePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -15,7 +14,7 @@ public class App
 {
     public static void main(String[] args) throws InterruptedException
     {
-        WebDriverManager.chromedriver().setup();
+
         WebDriver chromeDriver = new ChromeDriver();
 
         BbcWebsite bbcWebsite = new BbcWebsite(chromeDriver);

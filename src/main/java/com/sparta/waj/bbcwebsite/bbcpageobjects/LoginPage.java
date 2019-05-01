@@ -1,10 +1,7 @@
-package com.sparta.waj.bbcwebsite.pages;
+package com.sparta.waj.bbcwebsite.bbcpageobjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.FindBy;
-
-import javax.print.DocFlavor;
 
 public class LoginPage
 {
@@ -12,10 +9,10 @@ public class LoginPage
 
     private final String pageUrl = "https://account.bbc.com/signin";
     private final By emailField = By.id("user-identifier-input");
-
-
-
     private final By pwdField = By.id("password-input");
+    private final By nameError = By.id("form-message-username");
+    private final By pwdError = By.id("form-message-password");
+
 
     public LoginPage(WebDriver driver)
     {
@@ -38,4 +35,16 @@ public class LoginPage
         driver.findElement(pwdField).sendKeys(password);
         return this;
     }
+
+    public String readNameError()
+    {
+        return driver.findElement(nameError).getText();
+    }
+
+    public String readPwdError()
+    {
+        return driver.findElement(pwdError).getText();
+    }
+
+
 }

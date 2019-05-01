@@ -1,4 +1,4 @@
-package com.sparta.waj.bbcwebsite.pages;
+package com.sparta.waj.bbcwebsite.bbcpageobjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -7,7 +7,7 @@ public class HomePage
 {
     private WebDriver driver;
     private final String homepageUrl = "https://www.bbc.co.uk/";
-    private final By SIGN_ID = By.id("idcta-username");
+    private final By SIGN_ID = By.id("idcta-link");
 
     public HomePage(WebDriver driver)
     {
