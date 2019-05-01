@@ -42,7 +42,7 @@ public class HomePageTests
     @Test
     public void testPwdNotValid()
     {
-        String errorString = loginPage.inputPassword("aaa\t").readNameError();
+        String errorString = loginPage.inputPassword("aaa\t").readPwdError();
         Assert.assertTrue(errorString.contains("too short"));
     }
 
